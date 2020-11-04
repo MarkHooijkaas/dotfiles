@@ -1,0 +1,15 @@
+alias l="ls -la"
+alias m=less
+alias g=git
+alias gc="git checkout"
+alias gc="git commit"
+alias gs="git status"
+
+source dotfiles/bash/complete_alias
+
+complete -F _complete_alias l
+complete -F _complete_alias m
+complete -F _complete_alias g
+complete -F _complete_alias gc
+complete -F _complete_alias gco
+complete -F _complete_alias gs
