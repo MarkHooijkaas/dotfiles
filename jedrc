@@ -1,1 +1,8 @@
+
+% Don't wrap
 WRAP_DEFAULT = INT_MAX;
+
+LINENUMBERS = 1;
+
+% Don't make backup file
+No_Backups = 1;
