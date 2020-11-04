@@ -14,7 +14,7 @@ define global_mode_hook ( hook_name )
   local_setkey("bskip_word",    "\e[1;5D"); 
   local_setkey("backward_paragraph",     "\e[5~");
   local_setkey("forward_paragraph",     "\e[6~");
-  % local_setkey("self_insert_cmd", "^I");
+  local_setkey("self_insert_cmd", "^I");
 }
 
 % Don't make backup file
