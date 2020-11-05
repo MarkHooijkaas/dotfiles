@@ -1,0 +1,12 @@
+Host *
+     ForwardAgent yes
+     ForwardX11 no
+
+Host dock1
+	HostName 206.189.100.19
+	User root
+	
+
+Host dock2
+	HostName 206.189.100.21
+	User root
