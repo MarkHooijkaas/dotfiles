@@ -6,7 +6,7 @@ alias gco="git commit"
 alias gs="git status"
 alias gd="git diff"
 
-source dotfiles/bash/complete_alias
+source $HOME/dotfiles/bash/complete_alias
 
 complete -F _complete_alias l
 complete -F _complete_alias m
