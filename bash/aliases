@@ -5,6 +5,13 @@ alias gch="git checkout"
 alias gco="git commit"
 alias gs="git status"
 alias gd="git diff"
+alias gss='git submodule foreach git status'
+alias gsd='git submodule foreach git diff'
+alias gsp='git submodule foreach git push'
+alias gsc='git submodule foreach git commit'
+alias gsu='git submodule update --remote'
+alias k=kubectl
+alias e=micro
 
 source $HOME/dotfiles/bash/complete_alias
 
@@ -15,7 +22,7 @@ complete -F _complete_alias gch
 complete -F _complete_alias gco
 complete -F _complete_alias gs
 complete -F _complete_alias gd
-
+complete -F _complete_alias k
 
 
 # see answer of rouble in
@@ -24,23 +31,23 @@ HISTSIZE=100000
 HISTFILESIZE=$HISTSIZE
 HISTCONTROL=ignorespace:ignoredups
 
-_bash_history_sync() {
-  builtin history -a         #1
-  HISTFILESIZE=$HISTSIZE     #2
-}
+#_bash_history_sync() {
+#  builtin history -a         #1
+#  HISTFILESIZE=$HISTSIZE     #2
+#}
 
-_bash_history_sync_and_reload() {
-  builtin history -a         #1
-  HISTFILESIZE=$HISTSIZE     #2
-  builtin history -c         #3
-  builtin history -r         #4
-}
+#_bash_history_sync_and_reload() {
+#  builtin history -a         #1
+#  HISTFILESIZE=$HISTSIZE     #2
+  #builtin history -c         #3
+  #builtin history -r         #4
+#}
 
-history() {                  #5
-  _bash_history_sync_and_reload
-  builtin history "$@"
-}
+#history() {                  #5
+#  _bash_history_sync_and_reload
+#  builtin history "$@"
+#}
 
 export HISTTIMEFORMAT="%y/%m/%d %H:%M:%S   "
 PROMPT_COMMAND='history 1 >> ${HOME}/.bash_eternal_history'
-PROMPT_COMMAND="_bash_history_sync;$PROMPT_COMMAND"
+#PROMPT_COMMAND="_bash_history_sync;$PROMPT_COMMAND"
