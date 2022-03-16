@@ -11,7 +11,12 @@ alias gsp='git submodule foreach git push'
 alias gsc='git submodule foreach git commit'
 alias gsu='git submodule update --remote'
 alias k=kubectl
+alias ka='kubectl --context=acc --namespace'
+alias kp='kubectl --context=prd --namespace'
 alias e=micro
+alias h='grep <~/.bash_eternal_history'
+#alias hm='grep <~/.bash_eternal_history | less'
+#alias ht='grep <~/.bash_eternal_history | tail'
 
 source $HOME/dotfiles/bash/complete_alias
 
@@ -23,7 +28,8 @@ complete -F _complete_alias gco
 complete -F _complete_alias gs
 complete -F _complete_alias gd
 complete -F _complete_alias k
-
+complete -F _complete_alias ka
+complete -F _complete_alias kp
 
 # see answer of rouble in
 # https://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows
