@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+socket=${1:-~/.ssh/sockets/ssh-agent}
+
+if [ -S  $socket ]; then
+    echo ssh-agent already running on socket $socket, with following keys:
+    SSH_AUTH_SOCK=$socket ssh-add -l | awk '{print "- " $3}'
+else
+    ssh-agent -a $socket >/dev/null
+    echo ssh-agent started on socket $socket
+fi
