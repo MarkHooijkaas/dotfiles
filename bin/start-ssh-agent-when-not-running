@@ -1,12 +1,18 @@
 #!/bin/bash
 set -e
 
+function dotfile_verbose() {
+    if ${DOTFILE_VERBOSE:-false}; then
+        echo $@
+    fi
+}
+
 socket=${1:-~/.ssh/sockets/ssh-agent}
 
 if [ -S  $socket ]; then
-    echo ssh-agent already running on socket $socket, with following keys:
+    dotfile_verbose ssh-agent already running on socket $socket, with following keys:
     SSH_AUTH_SOCK=$socket ssh-add -l | awk '{print "- " $3}'
 else
     ssh-agent -a $socket >/dev/null
-    echo ssh-agent started on socket $socket
+    dotfile_verbose ssh-agent started on socket $socket
 fi
