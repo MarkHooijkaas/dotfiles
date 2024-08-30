@@ -1,6 +1,9 @@
 export SSH_AUTH_SOCK=~/.ssh/ssh-agent-socket
 ~/bin/start-ssh-agent-when-not-running $SSH_AUTH_SOCK
 
+export PS1_HOST=laptop
+. ~/.dotfiles/bash/bash-prompt.inc
+
 # https://askubuntu.com/questions/1042234/modifying-the-color-of-grep
 export GREP_COLORS='fn=2'
 export GIT_EDITOR="vi +startinsert"
@@ -35,7 +38,6 @@ alias h='grep <~/.bash_eternal_history'
 
 alias pmp='ssh oldjump bin/pmp'
 
-source $HOME/.dotfiles/bash/complete_alias
 
 complete -F _complete_alias l
 complete -F _complete_alias m
