@@ -1,15 +1,3 @@
-
-case "${hostname}" in
-  LT-*)
-    PS1_HOST=laptop
-    ;;
-  auto808160-prd*)
-    PS1_HOST=gitlab
-    ;;
-esac
-
-PS1_HOST=laptop
-
 : ${PS1_USER:=$USER}
 : ${PS1_HOST:=$(hostname)}
 
