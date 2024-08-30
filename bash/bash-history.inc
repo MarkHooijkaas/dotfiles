@@ -22,10 +22,14 @@ HISTCONTROL=ignorespace:ignoredups
 #  builtin history "$@"
 #}
 
-export HISTTIMEFORMAT="%y/%m/%d %H:%M:%S   "
-PROMPT_COMMAND='history 1 >> ${HOME}/.bash_eternal_history'
+
+mkdir -p ${XDG_STATE_HOME}/dotfiles
+DOTFILES_BASH_ETERNAL_HISTORY=$XDG_STATE_HOME/dotfiles/bash_eternal_history
+
+export HISTTIMEFORMAT="%y/%m/%d %H:%M:%S"
+PROMPT_COMMAND='history 1 >>$DOTFILES_BASH_ETERNAL_HISTORY'
 #PROMPT_COMMAND="_bash_history_sync;$PROMPT_COMMAND"
 
-alias h='grep <~/.bash_eternal_history'
-#alias hm='grep <~/.bash_eternal_history | less'
-#alias ht='grep <~/.bash_eternal_history | tail'
+alias h='grep <$DOTFILES_BASH_ETERNAL_HISTORY'
+#alias hm='grep <$DOTFILES_BASH_ETERNAL_HISTORY | less'
+#alias ht='grep <$DOTFILES_BASH_ETERNAL_HISTORY | tail'
