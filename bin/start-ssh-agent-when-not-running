@@ -8,6 +8,8 @@ function dotfile_verbose() {
 }
 
 socket=${1:-~/.ssh/sockets/ssh-agent}
+pid=$(ps ux| grep ssh-agent -a $socket)
+echo pid
 
 if [ -S  $socket ]; then
     dotfile_verbose ssh-agent already running on socket $socket, with following keys:
