@@ -6,7 +6,7 @@ export DOTFILES
 : ${XDG_STATE_HOME:=~/.local/state}
 
 function dotfile_verbose() {
-    if ${DOTFILE_VERBOSE:-false}; then
+    if ${DOTFILE_VERBOSE:-true}; then
         echo $@
     fi
 }
