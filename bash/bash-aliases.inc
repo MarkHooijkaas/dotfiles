@@ -11,6 +11,7 @@ alias l="ls -la"
 alias m=less
 alias e="vi +startinsert"
 alias gr='grep -r --exclude-dir=.git/objects'
+alias pg='pgrep -f'
 
 complete -F _complete_alias l
 complete -F _complete_alias m
