@@ -13,6 +13,10 @@ alias e="vi +startinsert"
 alias gr='grep -r --exclude-dir=.git/objects'
 alias pg='pgrep -f'
 
+# cut fields separated by arbitrary whitespace
+# https://stackoverflow.com/questions/4367304/unix-need-to-cut-a-file-which-has-multiple-blanks-as-delimiter-awk-or-cut
+alias fcut="tr -s ' ' | cut -d ' '"
+
 complete -F _complete_alias l
 complete -F _complete_alias m
 complete -F _complete_alias e
