@@ -21,7 +21,7 @@
     #pb = pull --rebase
 
 [core]
-    pager = delta
+#    pager = delta
 
 [interactive]
     diffFilter = delta --color-only
