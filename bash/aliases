@@ -8,6 +8,7 @@ export PS1_HOST=laptop
 export GREP_COLORS='fn=2'
 export GIT_EDITOR="vi +startinsert"
 
+alias reload_bashrc='source ~/.bashrc'
 
 alias l="ls -la"
 alias m=less
@@ -16,7 +17,7 @@ alias gr='grep -r --exclude-dir=.git/objects'
 
 alias g=git
 alias gch="git checkout"
-alias gco="git commit"
+alias gc="git commit"
 alias gs="git status"
 alias gd="git diff"
 alias gss='git submodule foreach git status'
