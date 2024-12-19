@@ -4,13 +4,14 @@
 export GREP_COLORS='fn=2'
 
 alias ..='cd ..'
-alias ...='cd ...'
-
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
 alias l="ls -la"
 alias m=less
 alias e="vi +startinsert"
-alias gr='grep -r --exclude-dir=.git/objects'
+alias gr='grep -r --exclude-dir=.git/'
 alias pg='pgrep -f'
 
 # cut fields separated by arbitrary whitespace
