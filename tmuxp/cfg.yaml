@@ -1,0 +1,10 @@
+session_name: config
+start_directory: "~/work/personal"
+
+windows:
+  - window_name: home
+    shell_command_before: cd
+  - window_name: dotfiles
+    shell_command_before: cd ~/work/personal/dotfiles
+  - window_name: work
+    shell_command_before: cd ~/work/
