@@ -26,7 +26,8 @@ HISTCONTROL=ignorespace:ignoredups
 mkdir -p ${XDG_STATE_HOME}/dotfiles
 DOTFILES_BASH_ETERNAL_HISTORY=$XDG_STATE_HOME/dotfiles/bash_eternal_history
 
-export HISTTIMEFORMAT="%y/%m/%d %H:%M:%S"
+
+export HISTTIMEFORMAT="%y/%m/%d %H:%M:%S%t"
 PROMPT_COMMAND='history 1 >>$DOTFILES_BASH_ETERNAL_HISTORY'
 #PROMPT_COMMAND="_bash_history_sync;$PROMPT_COMMAND"
 
