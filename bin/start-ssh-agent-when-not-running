@@ -8,7 +8,8 @@ function dotfile_verbose() {
 }
 
 socket=${1:-~/.ssh/sockets/ssh-agent}
-pid=$(ps ux| grep ssh-agent -a $socket)
+mkdir -p $(dirname $socket)
+pid=$(ps ux| grep "ssh-agent -a $socket")
 echo pid
 
 if [ -S  $socket ]; then
