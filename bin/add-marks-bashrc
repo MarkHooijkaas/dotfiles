@@ -5,7 +5,7 @@ MARKS_DOTFILES=$(cd $(dirname ${BASH_SOURCE[0]}); cd ..; pwd)
 bashrc=~/.bashrc
 inc_file=$MARKS_DOTFILES/bash/bashrc-main.inc
 
-found=$(egrep "^[^#]*source $inc_file" $bashrc)
+found=$(grep -E "^[^#]*source $inc_file" $bashrc)
 
 if [ -z "$found" ] ; then
   echo modifying $bashrc to include $inc_file
