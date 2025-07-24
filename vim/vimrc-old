@@ -1,0 +1,8 @@
+inoremap <C-q> <esc>:qa<cr>
+nnoremap <C-q> :qa<cr>
+
+inoremap <C-s> <esc>:w<cr> 
+nnoremap <C-s> :w<cr>
+
+inoremap <C-x> <esc>:x<cr>
+nnoremap <C-x> :x<cr>

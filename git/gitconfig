@@ -1,6 +1,7 @@
 [user]
     name = Mark Hooijkaas
     email = mark@hooijkaas.net
+    #email = mark@kisst.org
 
 [init]
     defaultBranch = main
@@ -22,6 +23,8 @@
 
 [core]
 #    pager = delta
+    editor = vi -c 'startinsert'
+
 
 [interactive]
     diffFilter = delta --color-only
@@ -37,3 +40,4 @@
 
 [diff]
     colorMoved = default
+    submodule = log

@@ -1,0 +1,15 @@
+
+KREATE_BASE_DIR=/home/mark/odf/kube/kube-odf-base/kreate
+
+KREATE_COMMAND="kustomize build"
+
+
+KREATE_PIPE[show]=cat
+KREATE_PIPE[default]=cat
+KREATE_PIPE[files]="cat /dev/null"
+KREATE_PIPE[apply]="kubectl apply -f -"
+
+KREATE_HELP[show]="show the output"
+KREATE_HELP[default]="show the output"
+KREATE_HELP[files]="show no output"
+KREATE_HELP[apply]="apply the output to kubectl"
