@@ -22,3 +22,20 @@ complete -F _complete_alias l
 complete -F _complete_alias m
 complete -F _complete_alias e
 complete -F _complete_alias gr
+
+alias os='grep PRETTY /etc/os-release'
+alias reload="source ~/.bashrc"
+
+if type brew >/dev/null; then
+    alias b=brew
+    complete -F _complete_alias b
+fi
+
+if type distrobox >/dev/null; then
+    alias d=distrobox
+fi
+
+if type distrobox >/dev/null; then
+    alias cm=chezmoi
+    complete -F _complete_alias cm
+fi
